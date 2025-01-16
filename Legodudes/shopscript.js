@@ -11,7 +11,7 @@ products.map((product, index) => productHTML +=
             <a href="#KATEGORISIDE">Ninjago</a>
             <h3>${product.title}</h3>
             <p>Kr. ${product.price}</p>
-            <button onClick="addProductToCart(${product.prodid})">Legg i handelkurv</button>
+            <button onclick="addProductToCart(${product.prodid})">Legg i handelkurv</button>
         </article>`)
 
 // Finn #productList, og fyll den mec verdiene i variabelen productHTML
@@ -32,7 +32,7 @@ document.getElementById("shoppingcart").addEventListener("click", function() {
             // Oppdatere dette produktets quantity
             const index = cart.findIndex(p => p.cartprodid === prodid)
             //Så oppdatere rikitg quantity
-            cart(index.quantity++)
+            cart[index].quantity++
         } else {
         cart.push({ prodid: prodid, quantity: 1 })
         }
@@ -45,6 +45,7 @@ document.getElementById("shoppingcart").addEventListener("click", function() {
     function printCart() {
         //start med en tom varibael med tom HTML
         let cartHTML = ""
+        //Lager variabel for pris
         let cartTotal = 0
         // Lag varibale for antall produkter
         let cartNumber = 0
@@ -61,7 +62,7 @@ document.getElementById("shoppingcart").addEventListener("click", function() {
                         </article>`
 
             // regn ut total
-            cartTotal += currentProductInfo.price = cartprod.quantity
+            cartTotal += currentProductInfo.price * cartprod.quantity
             //Regn ut antall produkter
             cartNumber += cartprod.quantity
         })
