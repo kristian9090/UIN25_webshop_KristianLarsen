@@ -169,6 +169,8 @@ main {
     #cart-products {
         display: flex;
         flex-direction: column;
+        opacity: 0;
+        transition: ease-in-out .4s;
 
         article {
             display: flex;
@@ -201,4 +203,8 @@ main {
             }
         }
     }
+}
+
+#cart.visible {
+    opacity: 1;
 }
