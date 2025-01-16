@@ -15,7 +15,7 @@ products.map((product, index) => productHTML +=
         </article>`)
 
 // Finn #productList, og fyll den mec verdiene i variabelen productHTML
-document.getElementById("productList").innerHTML = productHTML
+document.getElementById("productlist").innerHTML = productHTML
 
 // Lage toggle funksjonalitet for handlevogn
 document.getElementById("shoppingcart").addEventListener("click", function() {

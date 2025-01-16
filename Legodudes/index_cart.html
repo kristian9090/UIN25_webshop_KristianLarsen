@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legodudes webshop</title>
-    <link href="style.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="styles_cart.css">
-    <!-- <script src="shopscript.js"></script> -->
+    <link href="styles_cart.css" rel="stylesheet" media="all">
+    <script src="shopscript.js" defer></script>
     <script src="legodudes.js"></script>
 </head>
 <body>
@@ -38,7 +37,7 @@
         <header>
             <a href="index.html" id="logo"><img src="website_images/LD_logo.svg" alt="Legodudes" /></a>
             <button id="shoppingcart">
-                <span id="cartcount">99</span>
+                <span id="cartcount">99</span>|
                 <img src="website_images/legocart.svg" alt="Handlevogn" />
             </button>
             <nav>
@@ -53,7 +52,7 @@
         </header>
         <main>
             <h2>Ninjago</h2>
-            <div id="productList"></div>
+            <div id="productlist"></div>
             <!--
             <article class="product-card">
                 <img src="website_images/PROD_dragon_zane.webp" alt="PRODUKTTITTEL" />
@@ -110,6 +109,5 @@
             <p>2025 &copy; Legodudes</p>
         </footer>
     </div>
-    <script src="shopscript.js"></script>
 </body>
 </html>
